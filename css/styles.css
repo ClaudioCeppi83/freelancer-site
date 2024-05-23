@@ -1,16 +1,62 @@
-html{
+:root {
+    --white: #ffffff;
+    --black: #212121;
+    --primary: #ffc107;
+    --secondary: #0097a7;
+    --grey: #757575;
+    /* se utiliza el formato 'color: var(***); */
+}
+
+html {
     font-size: 62.5%;
 }
 
-body{
+body {
     font-size: 16px; /* 1rem = 10px */
+    font-family: "Krub", sans-serif;
 }
 
-h1{
+.title {
     text-align: center;
     font-size: 3,8rem;
 }
 
-span{
+.title span {
     font-size: 2rem;
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.nav-bg {
+    background-color: var(--secondary);
+}
+
+.nav-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.nav-header a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.nav-header a:hover {
+    background-color: var(--primary);
+    color: var(--black);
+}
+
+@media (max-width: 480px) {
+    .nav-header {
+    flex-direction: column;
+    align-items: center;
+    }
 }
